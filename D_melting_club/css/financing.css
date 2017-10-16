@@ -70,7 +70,16 @@ p {
   color: #4a4a4a;
 }
 
-.Multi-productions .panel-width .introSeverices .textandpic {
+.Multi-productions .panel-width .introSeverices .fanancing-hostipal,
+.Multi-productions .panel-width .introSeverices .fanancing-agency,
+.Multi-productions .panel-width .introSeverices .fanancing-manufacturer {
+  width: 100%;
+  height: auto;
+}
+
+.Multi-productions .panel-width .introSeverices .fanancing-hostipal .textandpic,
+.Multi-productions .panel-width .introSeverices .fanancing-agency .textandpic,
+.Multi-productions .panel-width .introSeverices .fanancing-manufacturer .textandpic {
   width: 1104px;
   height: 298px;
   margin: 48px auto 0 auto;
@@ -78,14 +87,25 @@ p {
   box-shadow: 0 2px 14px 0 rgba(55, 111, 164, 0.15);
 }
 
-.Multi-productions .panel-width .introSeverices .textandpic .text {
+.Multi-productions .panel-width .introSeverices .fanancing-hostipal .textandpic .media,
+.Multi-productions .panel-width .introSeverices .fanancing-agency .textandpic .media,
+.Multi-productions .panel-width .introSeverices .fanancing-manufacturer .textandpic .media {
   width: 100%;
   height: 100%;
-  padding: 56px 90px;
+}
+
+.Multi-productions .panel-width .introSeverices .fanancing-hostipal .textandpic .text,
+.Multi-productions .panel-width .introSeverices .fanancing-agency .textandpic .text,
+.Multi-productions .panel-width .introSeverices .fanancing-manufacturer .textandpic .text {
+  width: 100%;
+  height: 100%;
+  padding: 56px 84px;
   font-family: "Microsoft Yahei";
 }
 
-.Multi-productions .panel-width .introSeverices .textandpic .text .media-heading {
+.Multi-productions .panel-width .introSeverices .fanancing-hostipal .textandpic .text .media-heading,
+.Multi-productions .panel-width .introSeverices .fanancing-agency .textandpic .text .media-heading,
+.Multi-productions .panel-width .introSeverices .fanancing-manufacturer .textandpic .text .media-heading {
   font-size: 18px;
   color: #212121;
   letter-spacing: 0;
@@ -93,14 +113,18 @@ p {
   line-height: 25px;
 }
 
-.Multi-productions .panel-width .introSeverices .textandpic .text .info {
+.Multi-productions .panel-width .introSeverices .fanancing-hostipal .textandpic .text .info,
+.Multi-productions .panel-width .introSeverices .fanancing-agency .textandpic .text .info,
+.Multi-productions .panel-width .introSeverices .fanancing-manufacturer .textandpic .text .info {
   font-size: 16px;
   color: #212121;
   letter-spacing: 0;
   line-height: 38px;
 }
 
-.Multi-productions .panel-width .introSeverices .textandpic:nth-child(3) {
+.Multi-productions .panel-width .introSeverices .fanancing-hostipal .second,
+.Multi-productions .panel-width .introSeverices .fanancing-agency .second,
+.Multi-productions .panel-width .introSeverices .fanancing-manufacturer .second {
   background: url(../images/bg_left.png) no-repeat center/100%;
 }
 
@@ -127,6 +151,7 @@ p {
 
 .Multi-productions .footer-intro {
   width: 100%;
-  height: 120px;
+  height: 119px;
+  margin-top: 64px;
   background: url(../images/service.png) no-repeat center/100%;
 }
