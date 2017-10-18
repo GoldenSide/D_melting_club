@@ -29,6 +29,10 @@ p {
   margin: 0;
 }
 
+body {
+  position: relative;
+}
+
 .header-title {
   width: 160px;
   height: 56px;
@@ -97,9 +101,8 @@ p {
 .Multi-productions .panel-width .introSeverices .fanancing-hostipal .textandpic .text,
 .Multi-productions .panel-width .introSeverices .fanancing-agency .textandpic .text,
 .Multi-productions .panel-width .introSeverices .fanancing-manufacturer .textandpic .text {
-  width: 100%;
   height: 100%;
-  padding: 56px 84px;
+  padding: 39px 84px;
   font-family: "Microsoft Yahei";
 }
 

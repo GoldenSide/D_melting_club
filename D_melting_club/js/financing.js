@@ -9,7 +9,7 @@
     app.config(["$routeProvider", function($routeProvider) {
         $routeProvider.when("/financing", {
             templateUrl: "./static/financing/financing.html",
-            // controller: "financingCtro"
+            controller: "financingCtro"
         })
     }]);
 
@@ -18,13 +18,32 @@
     // app.config(["$routeProvider", function($routeProvider) {
     //     $routeProvider.when("/details/:id", {
     //         templateUrl: "./details/details.html",
-    //         controller: "detailsController"
+    //         controller: "financingCtro"
     //     });
     // }]);
+    app.controller("financingCtro", ["$scope", function($scope) {
 
+        //    app.run(function($rootScope) {
+        //     $rootScope.data = {
+        //         current: "1" // 1代表张三，2代表李四，3代表王五
+        //     };
+        //     $rootScope.actions = {
+        //         setCurrent: function(param) {
+        //             $rootScope.data.current = param;
+        //         }
+        //     }
+        // })
 
+        $scope.data = {
+            current: "1" // 1代表张三，2代表李四，3代表王五
+        };
+        $scope.actions = {
+            setCurrent: function(param) {
+                $scope.data.current = param;
+            }
+        }
 
-
+    }])
 
 
 })(angular);

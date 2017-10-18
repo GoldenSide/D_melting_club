@@ -29,6 +29,11 @@ p {
   margin: 0;
 }
 
+body {
+  position: relative;
+  min-width: 1200px;
+}
+
 .header-title {
   width: 160px;
   height: 56px;
