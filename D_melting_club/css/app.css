@@ -31,6 +31,7 @@ p {
 
 body {
   position: relative;
+  min-width: 1200px;
 }
 
 .header-title {
@@ -140,6 +141,17 @@ body {
   line-height: 25px;
   color: rgba(255, 255, 255, 0.4);
   letter-spacing: 0;
+  cursor: pointer;
+}
+
+.footer .promote .promote-item p a {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+}
+
+.footer .promote .promote-item p a:hover {
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .footer .promote .ewm {

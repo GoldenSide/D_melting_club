@@ -16,11 +16,10 @@
         "D-Melting-Club_home",
         "D-Melting-Club_financing",
         "D-Melting-Club_asforus",
-        "D-Melting-Club_trouble"
+        "D-Melting-Club_trouble",
+        "D-Melting-Club_infocenter"
     ]);
-    // app.config(["$locationProvider", function($locationProvider) {
-    //     $locationProvider.hashPrefix("");
-    // }]);
+
 
     // 首页li标签的切换样式
     $(document).ready(function() {
@@ -30,6 +29,11 @@
         })
 
     })
-
+    app.config(["$routeProvider", function($routeProvider) {
+        $routeProvider.when("/asforus", {
+            templateUrl: "./static/asforus/asforus.html",
+            controller: "asforus"
+        })
+    }]);
 
 })(angular);

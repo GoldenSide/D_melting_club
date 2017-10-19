@@ -90,6 +90,15 @@
                 line-height: 25px;
                 color: rgba(255, 255, 255, 0.40);
                 letter-spacing: 0;
+                cursor: pointer;
+                a {
+                    color: rgba(255, 255, 255, 0.40);
+                    text-decoration: none;
+                }
+                a:hover {
+                    pointer-events: none;
+                    color: rgba(255, 255, 255, 0.40);
+                }
             }
         }
         //本模块公用和混用样式结束 
