@@ -21,6 +21,20 @@
     ]);
 
 
+    app.controller("app", ["$scope", function($scope) {
+
+    }])
+
+
+
+    app.config(["$routeProvider", function($routeProvider) {
+        $routeProvider.when("/infocenter", {
+            controller: "infocenter"
+        })
+    }]);
+
+
+
     // 首页li标签的切换样式
     $(document).ready(function() {
         $(".header .navbar-right").on("click", "li", function() {
@@ -29,11 +43,5 @@
         })
 
     })
-    app.config(["$routeProvider", function($routeProvider) {
-        $routeProvider.when("/asforus", {
-            templateUrl: "./static/asforus/asforus.html",
-            controller: "asforus"
-        })
-    }]);
 
 })(angular);
