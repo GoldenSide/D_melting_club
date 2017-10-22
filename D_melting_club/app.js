@@ -22,16 +22,18 @@
 
 
     app.controller("app", ["$scope", function($scope) {
+        $scope.s = true;
+        console.log($scope.s);
 
     }])
 
 
 
-    app.config(["$routeProvider", function($routeProvider) {
-        $routeProvider.when("/infocenter", {
-            controller: "infocenter"
-        })
-    }]);
+    // app.config(["$routeProvider", function($routeProvider) {
+    //     $routeProvider.when("/infocenter", {
+    //         controller: "infocenter"
+    //     })
+    // }]);
 
 
 

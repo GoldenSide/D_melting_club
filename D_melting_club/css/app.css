@@ -83,6 +83,10 @@ body {
   height: 90px;
 }
 
+.header .navbar .navbar-right .item {
+  width: 112px;
+}
+
 .header .navbar .navbar-right .item a {
   font-size: 20px;
   color: #757575;
@@ -100,7 +104,7 @@ body {
 
 .header .navbar .navbar-right .bootcolor a {
   color: #204b62;
-  font-family: PingFangSC-Semibold;
+  font-family: "Microsoft Yahei";
   color: #204B62;
   letter-spacing: 0;
 }
@@ -150,7 +154,6 @@ body {
 }
 
 .footer .promote .promote-item p a:hover {
-  pointer-events: none;
   color: rgba(255, 255, 255, 0.4);
 }
 

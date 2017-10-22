@@ -24,25 +24,7 @@
     // }]);
     app.controller("trouble", ["$scope", function($scope) {
 
-        //    app.run(function($rootScope) {
-        //     $rootScope.data = {
-        //         current: "1" // 1代表张三，2代表李四，3代表王五
-        //     };
-        //     $rootScope.actions = {
-        //         setCurrent: function(param) {
-        //             $rootScope.data.current = param;
-        //         }
-        //     }
-        // })
-
-        // $scope.data = {
-        //     current: "1" // 1代表张三，2代表李四，3代表王五
-        // };
-        // $scope.actions = {
-        //     setCurrent: function(param) {
-        //         $scope.data.current = param;
-        //     }
-        // }
+        $('.header').show();
 
     }])
 

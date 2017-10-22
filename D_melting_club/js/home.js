@@ -8,10 +8,24 @@
     //2.配置和首页相关的路由.
     app.config(["$routeProvider", function($routeProvider) {
         $routeProvider.when("/home", {
-            templateUrl: "./static/home/home.html"
+            templateUrl: "./static/home/home.html",
+            controller: "home"
         }).when("/", {
             redirectTo: "/home"
         });
     }]);
+
+
+    app.controller("home", ["$scope", function($scope) {
+        $('.header').show();
+        $scope.data = {
+            current: "1" // 1代表张三，2代表李四，3代表王五
+        };
+        $scope.actions = {
+            setCurrent: function(param) {
+                $scope.data.current = param;
+            }
+        }
+    }])
 
 })(angular);

@@ -166,7 +166,10 @@ body {
 
 .Multi-productions .footer-intro {
   width: 100%;
-  height: 119px;
+  height: auto;
   margin-top: 64px;
-  background: url(../images/service.png) no-repeat center/100%;
+}
+
+.Multi-productions .footer-intro img {
+  width: 100%;
 }

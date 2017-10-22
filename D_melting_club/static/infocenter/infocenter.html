@@ -5,7 +5,7 @@
         <div class="info-width">
             <div class="info-nav">
                 <span>信息中心</span>
-                <button type="button" class="btn btn-primary btn-lg">返回首页</button>
+                <button type="button" class="btn btn-primary btn-lg"><a href="#/home">返回首页</a></button>
             </div>
         </div>
     </div>
@@ -14,26 +14,38 @@
             <div class="info-list">
                 <div class="left">
                     <ul class="list-group">
-                        <li class="list-group-item">信息中心</li>
-                        <li class="list-group-item">融资业务</li>
-                        <li class="list-group-item">关于我们</li>
-                        <li class="list-group-item">新手指引</li>
-                        <li class="list-group-item">常见问题</li>
-                        <li class="list-group-item">网站公告</li>
-                        <li class="list-group-item">联系我们</li>
+                        <li class="list-groups-item">信息中心</li>
+                        <li class="list-groups-item " ng-class="{ 'active' : data.current == 1 }" ng-click="actions.setCurrent(1)">融资业务</li>
+                        <li class="list-groups-item" ng-class="{ 'active' : data.current == 2 }" ng-click="actions.setCurrent(2)">关于我们</li>
+                        <!--<li class="list-groups-item">新手指引</li>-->
+                        <li class="list-groups-item" ng-class="{ 'active' : data.current == 3 }" ng-click="actions.setCurrent(3)">常见问题</li>
+                        <li class="list-groups-item" ng-class="{ 'active' : data.current == 4 }" ng-click="actions.setCurrent(4)">网站公告</li>
+                        <li class="list-groups-item" ng-class="{ 'active' : data.current == 5 }" ng-click="actions.setCurrent(5)">联系我们</li>
                     </ul>
                 </div>
                 <div class="right">
-                    <div class="financing none-display  bgc">
-                        <h5>融资业务</h5>
-                        <ul class="list">
-                            <li class="list-item"><span>·</span>&nbsp;&nbsp;什么是融资租赁(设备直租)？</li>
-                            <li class="list-item"><span>·</span>&nbsp;&nbsp;什么是融资租赁(售后回租)？</li>
-                            <li class="list-item"><span>·</span>&nbsp;&nbsp;什么是医疗采购贷(应收账款质押)？</li>
-                            <li class="list-item"><span>·</span>&nbsp;&nbsp;什么是应收账款保理？</li>
-                        </ul>
+                    <div class="financing  bgc " ng-show="data.current == 1">
+                        <div class="parent">
+                            <h5>融资业务</h5>
+                            <ul class="list">
+                                <li class="list-item "><span>·</span>&nbsp;&nbsp;<span>什么是融资租赁(设备直租)？</span></li>
+                                <li class="list-item"><span>·</span>&nbsp;&nbsp;<span>什么是融资租赁(售后回租)？</span></li>
+                                <li class="list-item"><span>·</span>&nbsp;&nbsp;<span>什么是医疗采购贷(应收账款质押)？</span></li>
+                                <li class="list-item"><span>·</span>&nbsp;&nbsp;<span>什么是应收账款保理？</span></li>
+                            </ul>
+                        </div>
+                        <div class="children">
+                            <h5>联系我们</h5>
+                            <div class="text">
+                                <h3>什么是融资租赁(设备直租)？</h3>
+                                <div class="text-container">
+                                    <p>采购融资一体化，缓解资金压力。 </br>由渡众创业合作平台（以下简称“医融社平台”）提供的资金方出资购进客户所选定的设备，客户取得相关设备的使用权和收益权、并分期支付租金。租赁期满时，客户可根据合同约定的设备留购价格取得设备所有权。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="asforus none-display  bgc">
+                    <div class="asforus  bgc " ng-show="data.current == 2">
                         <h5>关于我们</h5>
                         <div class="text">
                             <h3>关于我们</h3>
@@ -46,9 +58,9 @@
 
                         </div>
                     </div>
-                    <div class="guide bgc">
-                    </div>
-                    <div class="trouble none-display bgc">
+                    <!--<div class="guide bgc">
+                    </div>-->
+                    <div class="trouble  bgc " ng-show="data.current == 3">
                         <h5>常见问题</h5>
                         <ul class="list">
                             <li class="list-item"><span>·</span>&nbsp;&nbsp;怎么成为医融社的会员？需要什么条件？</li>
@@ -63,13 +75,13 @@
                             <li class="list-item"><span>·</span>&nbsp;&nbsp;如果有平台上无法满足的需求如何处理？</li>
                         </ul>
                     </div>
-                    <div class="siteNotice none-display bgc">
-                        <h5>常见问题</h5>
+                    <div class="siteNotice bgc " ng-show="data.current == 4">
+                        <h5>网站公告</h5>
                         <ul class="list">
                             <li class="list-item"><span>·</span>&nbsp;&nbsp;【网站公告】：关于医融社平台服务升级的通知</li>
                         </ul>
                     </div>
-                    <div class="contactus bgc">
+                    <div class="contactus bgc" ng-show="data.current == 5">
                         <h5>联系我们</h5>
                         <div class="text">
                             <h3>联系我们</h3>
@@ -81,6 +93,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
