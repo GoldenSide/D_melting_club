@@ -16,7 +16,7 @@
     }]);
 
 
-    app.controller("infocenter", ["$scope", function($scope) {
+    app.controller("infocenter", ["$scope", "$http", function($scope, $http) {
         $('.header').hide();
         $scope.data = {
             current: "1" // 1代表张三，2代表李四，3代表王五
@@ -26,21 +26,53 @@
                 $scope.data.current = param;
             }
         }
-
-        console.log("aaa");
-        $('.right .financing .list').on('click', 'li', function() {
-            console.log("aaa");
-            $(this).parent().parent().hide().next().show().children().eq(0).html('融资业务>' + $(this).children().eq(1).html())
-                // $(".left .list-group").children().eq(1).html("融资介绍")
-
+        $http({
+            method: 'get',
+            url: '../static/JSON/infocenter.json',
         })
 
+        $http.get('../static/JSON/infocenter.json').then(function(result) {
+            // console.log(result.data.financing);
+            // $scope.financing = result.data.financing;
+            // $scope.trouble = result.data.trouble;
+            $scope.financing = [];
+            result.data.financing.forEach(function(v, i) {
+                // console.log(v.text);
+                // v.text.replace('/\r\n/g', "")
+                JSON.stringify(v.text).replace(/\r\n/g, "\n")
+                console.log(v.text);
 
-        $('.left .list-groups-item').eq(1).on("click",
-            function() {
-                $(this).parent().parent().next().children().eq(0).children().eq(0).show().next().hide();
-            }
-        );
+                $scope.financing.push(v);
+
+            });
+            result.data.trouble.forEach(function(v, i) {
+                v.text.replace('/\r\n/g', '<br/>')
+            });
+            // console.log(result.data.financing);
+            // $scope.financing = result.data.financing;
+            // $scope.trouble = result.data.trouble;
+        })
+
+        // $('.right .financing .list').on('click', 'li', function() {
+
+        //     $(this).parent().parent().hide()
+        //     $(this).data("text", $(this).html());
+        // .next().show().children().eq(0).html('融资业务>' + $(this).children().eq(1).html())
+        // $(".left .list-group").children().eq(1).html("融资介绍")
+        //     var index = $('.right .financing .list li').index($(this));
+        //     var $this = $(this);
+        //     show(index, $this);
+        // })
+
+        // function show(index, $this) {
+        //     $(".financing .children").eq(index).show().children().eq(0).html('融资业务>' + $this.data("text"))
+        // }
+
+        // $('.left .list-groups-item').eq(1).on("click",
+        //     function() {
+        //         $(this).parent().parent().next().children().eq(0).children().eq(0).show().next().hide();
+        //     }
+        // );
 
 
     }])

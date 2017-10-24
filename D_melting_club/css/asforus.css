@@ -82,6 +82,7 @@ body {
   color: #212121;
   letter-spacing: 0;
   line-height: 38px;
+  text-indent: 2em;
   font-family: "Microsoft Yahei";
 }
 
@@ -103,6 +104,12 @@ body {
 .asforus .asforus-container .second .media .media-left,
 .asforus .asforus-container .third .media .media-left {
   padding-right: 0;
+}
+
+.asforus .asforus-container .first .media .media-body,
+.asforus .asforus-container .second .media .media-body,
+.asforus .asforus-container .third .media .media-body {
+  width: 56.5%;
 }
 
 .asforus .asforus-container .first .media .text,
@@ -233,6 +240,7 @@ body {
 .asforus .asforus-container .second .media .pic img,
 .asforus .asforus-container .third .media .pic img {
   width: 100%;
+  height: 100%;
 }
 
 .asforus .asforus-container .forth {

@@ -25,6 +25,7 @@
                         color: #212121;
                         letter-spacing: 0;
                         line-height: 38px;
+                        text-indent: 2em;
                         font-family: "Microsoft Yahei"
                     }
                 }
@@ -42,6 +43,14 @@
                 .media-left {
                     padding-right: 0;
                 }
+                .media-body {
+                    width: 56.5%;
+                }
+                // .media-right{
+                //     img{
+                //         width: 
+                //     }
+                // }
                 .text {
                     width: 100%;
                     padding-left: 21.8%;
@@ -126,6 +135,7 @@
                     padding-left: 0;
                     img {
                         width: 100%;
+                        height: 100%;
                     }
                 }
             }

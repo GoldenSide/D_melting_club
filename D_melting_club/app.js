@@ -21,29 +21,45 @@
     ]);
 
 
-    app.controller("app", ["$scope", function($scope) {
+    app.controller("app", ["$scope", "$route", "$location", function($scope, $route, $location) {
         $scope.s = true;
-        console.log($scope.s);
-
+        // console.log($scope.s);
+        // console.log($route.current);
+        // console.log($log.debug($route.current));
+        var pathUrl = $location.path();
+        console.log(pathUrl);
     }])
-
-
-
-    // app.config(["$routeProvider", function($routeProvider) {
-    //     $routeProvider.when("/infocenter", {
-    //         controller: "infocenter"
-    //     })
-    // }]);
 
 
 
     // 首页li标签的切换样式
     $(document).ready(function() {
-        $(".header .navbar-right").on("click", "li", function() {
-            $(this).addClass("bootcolor").siblings().removeClass("bootcolor");
-            $(".header .navbar-right li").unbind();
+
+        $(".header .navbar-right").on("click", "a", function() {
+                $(this).parent().addClass("bootcolor").siblings().removeClass("bootcolor");
+                console.log("kai")
+                    // $(".header .navbar-right a").unbind();
+            })
+            // 一开始就触发点击首页的事件
+
+        // console.log($(".header .navbar-right li").eq(1).trigger("click"))
+        $(".header .navbar-right a").eq(0).trigger("click");
+        $(".foot-nav").on("click", function() {
+            var index = $(".foot-nav").index($(this));
+            var $this = $(this);
+            change(index);
         })
 
+
+        function change(index) {
+            if (index == 1 || index == 2) {
+                $(".header .navbar-right li").eq(1).trigger("click");
+            } else if (index == 0) {
+                $(".header .navbar-right li").eq(2).trigger("click");
+            } else if (index == 3) {
+                $(".header .navbar-right li").eq(3).trigger("click");
+            }
+        }
     })
 
 })(angular);

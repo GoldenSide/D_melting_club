@@ -7,32 +7,17 @@
     }]);
     //2.配置和首页相关的路由.
     app.config(["$routeProvider", function($routeProvider) {
-        $routeProvider.when("/financing", {
+        $routeProvider.when("/financing/:tag?", {
             templateUrl: "./static/financing/financing.html",
             controller: "financingCtro"
         })
     }]);
 
+    app.controller("financingCtro", ["$scope", "$http", "$route", "$routeParams", function($scope, $http, $route, $routeParams) {
 
-
-    // app.config(["$routeProvider", function($routeProvider) {
-    //     $routeProvider.when("/details/:id", {
-    //         templateUrl: "./details/details.html",
-    //         controller: "financingCtro"
-    //     });
-    // }]);
-    app.controller("financingCtro", ["$scope", function($scope) {
-
-        //    app.run(function($rootScope) {
-        //     $rootScope.data = {
-        //         current: "1" // 1代表张三，2代表李四，3代表王五
-        //     };
-        //     $rootScope.actions = {
-        //         setCurrent: function(param) {
-        //             $rootScope.data.current = param;
-        //         }
-        //     }
-        // })
+        if ($routeParams.tag) {
+            $('body,html').animate({ scrollTop: 1800 }, 500);
+        }
         $('.header').show();
         $scope.data = {
             current: "1" // 1代表张三，2代表李四，3代表王五
@@ -42,6 +27,7 @@
                 $scope.data.current = param;
             }
         }
+
 
     }])
 
